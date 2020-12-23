@@ -31,21 +31,14 @@ class MainActivity: AppCompatActivity(), BottomNavigationView.OnNavigationItemSe
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.menu_home -> {
-                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, homeFragment).commit()
-            }
-            R.id.menu_feed -> {
-                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, feedFragment).commit()
-            }
-            R.id.menu_place -> {
-                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, placeFragment).commit()
-            }
-            R.id.menu_chat -> {
-                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, chatFragment).commit()
-            }
-            R.id.menu_user -> {
-                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, userFragment).commit()
-            }
+            R.id.menu_home -> homeFragment
+            R.id.menu_feed -> feedFragment
+            R.id.menu_place -> placeFragment
+            R.id.menu_chat -> chatFragment
+            R.id.menu_user -> userFragment
+            else -> error("no such item")
+        }.let { fragment ->
+            supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit()
         }
         return true
     }
