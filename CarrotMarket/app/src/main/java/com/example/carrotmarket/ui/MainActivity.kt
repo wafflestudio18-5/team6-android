@@ -14,8 +14,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 class MainActivity: AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener{
     private lateinit var binding: ActivityMainBinding
     private val viewModel: ViewModel by viewModel()
-
-    private val fragmentManager = supportFragmentManager
+    
     private val homeFragment = HomeFragment()
     private val feedFragment = FeedFragment()
     private val placeFragment = PlaceFragment()
