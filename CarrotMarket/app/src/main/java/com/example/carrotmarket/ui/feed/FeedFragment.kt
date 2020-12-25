@@ -1,5 +1,6 @@
-package com.example.carrotmarket.feed
+package com.example.carrotmarket.ui.feed
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.carrotmarket.R
 import com.example.carrotmarket.databinding.FragmentFeedBinding
+import com.example.carrotmarket.ui.MainActivity
+import kotlinx.android.synthetic.main.fragment_feed.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class FeedFragment: Fragment(){
@@ -24,5 +27,9 @@ class FeedFragment: Fragment(){
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        floatingActionButton.setOnClickListener{
+            val nextIntent = Intent(context, CreateFeedActivity::class.java)
+            startActivity(nextIntent)
+        }
     }
 }

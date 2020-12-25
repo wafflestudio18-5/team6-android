@@ -1,8 +1,10 @@
-package com.example.carrotmarket.feed
+package com.example.carrotmarket.ui.feed
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.carrotmarket.api.Feed
 import com.example.carrotmarket.databinding.ItemFeedBinding
@@ -32,5 +34,9 @@ class FeedListAdapter : RecyclerView.Adapter<FeedViewHolder>(){
 class FeedViewHolder(private val binding: ItemFeedBinding): RecyclerView.ViewHolder(binding.root){
     fun bindItems(feed: Feed){
         binding.item = feed
+        itemView.setOnClickListener{
+            val intent = Intent(itemView.context, DetailFeedActivity::class.java)
+            ContextCompat.startActivity(itemView.context, intent, null)
+        }
     }
 }

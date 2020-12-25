@@ -3,7 +3,7 @@ package com.example.carrotmarket
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.carrotmarket.api.Feed
-import com.example.carrotmarket.feed.FeedListAdapter
+import com.example.carrotmarket.ui.feed.FeedListAdapter
 
 @BindingAdapter("feeds")
 fun bindItem(view: RecyclerView, feed: List<Feed>){

@@ -5,10 +5,10 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.carrotmarket.feed.FeedViewModel" />
+            type="com.example.carrotmarket.ui.feed.FeedViewModel" />
         <variable
             name="adapter"
-            type="com.example.carrotmarket.feed.FeedListAdapter" />
+            type="com.example.carrotmarket.ui.feed.FeedListAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,6 +28,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/item_feed"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:backgroundTint="@android:color/holo_orange_dark"
+            app:srcCompat="@android:drawable/ic_menu_edit"
+            tools:layout_editor_absoluteX="336dp"
+            tools:layout_editor_absoluteY="657dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,4 +1,4 @@
-package com.example.carrotmarket.feed
+package com.example.carrotmarket.ui.feed
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
