@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CarrotMarket</string>
+    <string name="random">Random String</string>
+    <string name="profile_image_description">Profile Image</string>
 </resources>

@@ -10,7 +10,6 @@ import com.example.carrotmarket.R
 import com.example.carrotmarket.databinding.FragmentPlaceBinding
 
 class PlaceFragment: Fragment(){
-    private val viewModel: ViewModel by viewModel()
     private lateinit var binding: FragmentPlaceBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?{

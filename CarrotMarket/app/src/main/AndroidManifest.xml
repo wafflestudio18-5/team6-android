@@ -19,6 +19,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.user.ProfileActivity" />
+        <activity android:name=".ui.user.SellHistoryActivity" />
+        <activity android:name=".ui.user.BuyHistoryActivity" />
+        <activity android:name=".ui.user.WatchlistActivity" />
+        <activity android:name=".ui.user.TownSettingActivity" />
+        <activity android:name=".ui.user.TownVerifyActivity" />
+        <activity android:name=".ui.user.KeywordNoticeActivity" />
+        <activity android:name=".ui.user.FollowingActivity" />
+        <activity android:name=".ui.user.MyFeedActivity" />
+        <activity android:name=".ui.user.MyFeedCommentActivity" />
+        <activity android:name=".ui.user.TownSubjectActivity" />
+        <activity android:name=".ui.user.CEOMenuActivity" />
+        <activity android:name=".ui.user.FriendInviteActivity" />
+        <activity android:name=".ui.user.ShareActivity" />
+        <activity android:name=".ui.user.AnnouncementsActivity" />
+        <activity android:name=".ui.user.FAQActivity" />
+        <activity android:name=".ui.user.PreferencesActivity" />
     </application>
 
 </manifest>

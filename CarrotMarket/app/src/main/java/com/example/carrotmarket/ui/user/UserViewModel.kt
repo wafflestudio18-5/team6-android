@@ -1,4 +1,4 @@
-package com.example.carrotmarket.ui
+package com.example.carrotmarket.ui.user
 
 import androidx.lifecycle.ViewModel
 import com.example.carrotmarket.repository.Repository
