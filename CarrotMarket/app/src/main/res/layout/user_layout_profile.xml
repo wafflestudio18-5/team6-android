@@ -7,7 +7,10 @@
             name="icon"
             type="android.graphics.drawable.Drawable" />
         <variable
-            name="text"
+            name="userName"
+            type="String" />
+        <variable
+            name="town"
             type="String" />
 
     </data>
@@ -43,7 +46,7 @@
                 android:id="@+id/userNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{text}"
+                android:text="@{userName}"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -54,7 +57,7 @@
                 android:id="@+id/townTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{text}"
+                android:text="@{town}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/userNameTextView" />
@@ -65,7 +68,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="200dp"
-                android:text="Button"
+                android:text="@string/view_profile"
+                android:background="@color/colorWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.555"

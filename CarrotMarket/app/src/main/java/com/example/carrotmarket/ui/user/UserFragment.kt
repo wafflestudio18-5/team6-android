@@ -46,8 +46,8 @@ class UserFragment: Fragment(){
         binding.preferences.layout.setOnClickListener{ openActivity(PreferencesActivity::class.java) }
     }
 
-    fun openActivity(activity: Class<*>){
-        activity?.let{
+    private fun openActivity(activity: Class<*>){
+        activity.let{
             val intent = Intent(context, activity)
             startActivity(intent)
         }

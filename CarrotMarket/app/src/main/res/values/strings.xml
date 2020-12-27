@@ -1,5 +1,23 @@
 <resources>
     <string name="app_name">CarrotMarket</string>
-    <string name="random">Random String</string>
+
     <string name="profile_image_description">Profile Image</string>
+    <string name="sell_history">판매내역</string>
+    <string name="buy_history">구매내역</string>
+    <string name="watchlist">관심목록</string>
+    <string name="town_setting">내 동네 설정</string>
+    <string name="town_verify">동네 인증하기</string>
+    <string name="keyword_notice">키워드 알림</string>
+    <string name="following">모아보기</string>
+    <string name="my_feed">동네생활 글</string>
+    <string name="my_feed_comment">동네생활 댓글</string>
+    <string name="preferences">앱 설정</string>
+    <string name="announcements">공지 사항</string>
+    <string name="FAQ">자주 묻는 질문</string>
+    <string name="friend_invite">친구초대</string>
+    <string name="share">당근마켓 공유</string>
+    <string name="CEO_menu">사장님 메뉴</string>
+    <string name="town_subjects">동네생활 주제 목록</string>
+    <string name="view_profile">프로필 보기</string>
+
 </resources>

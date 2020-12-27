@@ -36,6 +36,7 @@
         <activity android:name=".ui.user.AnnouncementsActivity" />
         <activity android:name=".ui.user.FAQActivity" />
         <activity android:name=".ui.user.PreferencesActivity" />
+        <activity android:name=".ui.user.PushPreferencesActivity" />
     </application>
 
 </manifest>

@@ -1,6 +1,10 @@
 package com.example.carrotmarket.ui
 
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import android.os.Bundle
+import android.util.Base64
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -8,6 +12,8 @@ import com.example.carrotmarket.R
 import com.example.carrotmarket.databinding.ActivityMainBinding
 import com.example.carrotmarket.ui.user.UserFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
 
 
 class MainActivity: AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener{
@@ -43,4 +49,7 @@ class MainActivity: AppCompatActivity(), BottomNavigationView.OnNavigationItemSe
         }
         return true
     }
+
+
+
 }

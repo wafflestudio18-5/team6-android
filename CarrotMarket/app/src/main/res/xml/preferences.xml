@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:title="알림 설정"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:title="푸시 알림 설정"
+            android:key="key_set_push_notification"
+            app:iconSpaceReserved="false">
+        </Preference>
+
+        <SwitchPreference
+            android:title="방해금지 시간설정"
+            android:key="key_set_no_disturb_mode"
+            android:defaultValue="false"
+            app:iconSpaceReserved="false">
+        </SwitchPreference>
+
+        <SwitchPreference
+            android:title="진동"
+            android:key="key_set_vibration"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false">
+        </SwitchPreference>
+
+        <ListPreference
+            android:title="알림음"
+            android:key="key_notification_sound"
+            android:entries="@array/notification_sound_list"
+            android:entryValues="@array/notification_sound_values"
+            android:defaultValue="1"
+            app:iconSpaceReserved="false">
+        </ListPreference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="사용자 설정"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:title="계정/정보 관리"
+            app:iconSpaceReserved="false">
+        </Preference>
+
+        <Preference
+            android:title="모아보기 사용자 관리"
+            app:iconSpaceReserved="false">
+        </Preference>
+
+        <Preference
+            android:title="차단사용자 관리"
+            app:iconSpaceReserved="false">
+        </Preference>
+
+        <Preference
+            android:title="게시글 미노출 사용자 관리"
+            app:iconSpaceReserved="false">
+        </Preference>
+
+        <ListPreference
+            android:title="언어"
+            android:key="key_language"
+            android:entries="@array/language_list"
+            android:entryValues="@array/language_values"
+            android:defaultValue="1"
+            app:iconSpaceReserved="false">
+        </ListPreference>
+
+        <Preference
+            android:title="기타 설정"
+            app:iconSpaceReserved="false">
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="기타"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:title="앱 캐시 정리하기"
+            app:iconSpaceReserved="false">
+        </Preference>
+
+        <Preference
+            android:title="오픈소스 라이선스"
+            app:iconSpaceReserved="false">
+        </Preference>
+
+        <Preference
+            android:title="버전 1.0.0"
+            app:iconSpaceReserved="false">
+        </Preference>
+
+        <Preference
+            android:title="로그아웃"
+            app:iconSpaceReserved="false">
+        </Preference>
+
+        <Preference
+            android:title="탈퇴하기"
+            app:iconSpaceReserved="false">
+        </Preference>
+
+    </PreferenceCategory>
+
+
+</androidx.preference.PreferenceScreen>

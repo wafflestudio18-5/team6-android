@@ -2,6 +2,15 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
+        <variable
+            name="profileIcon"
+            type="android.graphics.drawable.Drawable" />
+        <variable
+            name="userName"
+            type="String" />
+        <variable
+            name="town"
+            type="String" />
 
 
     </data>
@@ -12,29 +21,29 @@
 
         <LinearLayout android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/colorGray">
 
             <include layout="@layout/user_layout_profile"
                 android:id="@+id/userProfile"
-                app:text="@{@string/app_name}" />
+                app:userName="@{userName}"
+                app:town="@{town}"/>
 
             <include layout="@layout/user_layout_history"
-                android:id="@+id/userHistory"
-                app:text="@{@string/random}" />
+                android:id="@+id/userHistory" />
 
             <include layout="@layout/user_layout"
                 android:id="@+id/townSetting"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/town_setting}"/>
             <include layout="@layout/user_layout"
                 android:id="@+id/townVerify"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/town_verify}"/>
             <include layout="@layout/user_layout"
                 android:id="@+id/keywordNotice"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/keyword_notice}"/>
             <include layout="@layout/user_layout"
                 android:id="@+id/following"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/following}"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -42,13 +51,13 @@
 
             <include layout="@layout/user_layout"
                 android:id="@+id/myFeed"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/my_feed}"/>
             <include layout="@layout/user_layout"
                 android:id="@+id/myFeedComment"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/my_feed_comment}"/>
             <include layout="@layout/user_layout"
                 android:id="@+id/townSubject"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/town_subjects}"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,7 +65,7 @@
 
             <include layout="@layout/user_layout"
                 android:id="@+id/CEOMenu"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/CEO_menu}"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -64,19 +73,19 @@
 
             <include layout="@layout/user_layout"
                 android:id="@+id/friendInvite"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/friend_invite}"/>
             <include layout="@layout/user_layout"
                 android:id="@+id/share"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/share}"/>
             <include layout="@layout/user_layout"
                 android:id="@+id/announcements"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/announcements}"/>
             <include layout="@layout/user_layout"
                 android:id="@+id/FAQ"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/FAQ}"/>
             <include layout="@layout/user_layout"
                 android:id="@+id/preferences"
-                app:text="@{@string/random}"/>
+                app:text="@{@string/preferences}"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

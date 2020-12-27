@@ -1,20 +1,34 @@
 package com.example.carrotmarket.ui.user
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
+import androidx.preference.Preference
+import androidx.preference.PreferenceFragmentCompat
 import com.example.carrotmarket.R
-import com.example.carrotmarket.databinding.ActivityPreferencesBinding
-import com.example.carrotmarket.databinding.ActivityProfileBinding
-import com.example.carrotmarket.databinding.ActivitySellHistoryBinding
-import com.example.carrotmarket.databinding.ActivityWatchlistBinding
 
 class PreferencesActivity: AppCompatActivity() {
-    private lateinit var binding: ActivityPreferencesBinding
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_preferences)
+        supportFragmentManager.beginTransaction().replace(android.R.id.content, PreferencesFragment()).commit()
+    }
+
+}
+
+class PreferencesFragment: PreferenceFragmentCompat(){
+
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        addPreferencesFromResource(R.xml.preferences)
+        addOpenActivity("key_set_push_notification")
+    }
+
+    private fun addOpenActivity(key: String){
+        findPreference<Preference>(key)?.setOnPreferenceClickListener {
+            val intent = Intent(context,PushPreferencesActivity::class.java)
+            startActivity(intent)
+            return@setOnPreferenceClickListener true
+        }
     }
 
 }

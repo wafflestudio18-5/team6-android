@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="notification_sound_list">
+        <item>당근(귀요미 챙)</item>
+        <item>땅근(다인이)</item>
+        <item>당근이 아떠요~(다은이)</item>
+        <item>당근이 왔어요(BB)</item>
+        <item>당근 주세요(준환이)</item>
+        <item>애미야 당근왔다(민주)</item>
+        <item>기본 알림음</item>
+    </string-array>
+    
+    <string-array name="notification_sound_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="language_list">
+        <item>한국어</item>
+        <item>English(GB)</item>
+        <item>English(CA)</item>
+        <item>English(US)</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+
+</resources>
