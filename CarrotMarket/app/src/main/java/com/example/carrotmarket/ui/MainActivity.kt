@@ -7,6 +7,11 @@ import androidx.databinding.DataBindingUtil
 import com.example.carrotmarket.R
 import com.example.carrotmarket.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.carrotmarket.ui.HomeFragment
+import com.example.carrotmarket.ui.FeedFragment
+import com.example.carrotmarket.ui.PlaceFragment
+import com.example.carrotmarket.ui.ChatFragment
+import com.example.carrotmarket.ui.UserFragment
 
 
 class MainActivity: AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener{
