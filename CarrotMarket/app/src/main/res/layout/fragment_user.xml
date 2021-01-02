@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="profileIcon"
+            name="profileImage"
             type="android.graphics.drawable.Drawable" />
         <variable
             name="userName"
@@ -26,6 +26,7 @@
 
             <include layout="@layout/user_layout_profile"
                 android:id="@+id/userProfile"
+                app:image="@{profileImage}"
                 app:userName="@{userName}"
                 app:town="@{town}"/>
 

@@ -1,4 +1,4 @@
-package com.example.carrotmarket.ui.user
+package com.example.carrotmarket.ui.user.preference
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,9 @@ class PreferencesActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        supportFragmentManager.beginTransaction().replace(android.R.id.content, PreferencesFragment()).commit()
+        supportFragmentManager.beginTransaction().replace(android.R.id.content,
+            PreferencesFragment()
+        ).commit()
     }
 
 }
@@ -25,7 +27,8 @@ class PreferencesFragment: PreferenceFragmentCompat(){
 
     private fun addOpenActivity(key: String){
         findPreference<Preference>(key)?.setOnPreferenceClickListener {
-            val intent = Intent(context,PushPreferencesActivity::class.java)
+            val intent = Intent(context,
+                PushPreferencesActivity::class.java)
             startActivity(intent)
             return@setOnPreferenceClickListener true
         }

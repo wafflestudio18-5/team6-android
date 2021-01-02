@@ -6,6 +6,7 @@
 
     <application
         android:name=".CarrotMarketApplication"
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.user.ProfileActivity" />
+        <activity android:name=".ui.user.profile.ProfileActivity" />
         <activity android:name=".ui.user.SellHistoryActivity" />
         <activity android:name=".ui.user.BuyHistoryActivity" />
         <activity android:name=".ui.user.WatchlistActivity" />
@@ -28,15 +29,18 @@
         <activity android:name=".ui.user.KeywordNoticeActivity" />
         <activity android:name=".ui.user.FollowingActivity" />
         <activity android:name=".ui.user.MyFeedActivity" />
-        <activity android:name=".ui.user.MyFeedCommentActivity" />
         <activity android:name=".ui.user.TownSubjectActivity" />
         <activity android:name=".ui.user.CEOMenuActivity" />
         <activity android:name=".ui.user.FriendInviteActivity" />
         <activity android:name=".ui.user.ShareActivity" />
         <activity android:name=".ui.user.AnnouncementsActivity" />
         <activity android:name=".ui.user.FAQActivity" />
-        <activity android:name=".ui.user.PreferencesActivity" />
-        <activity android:name=".ui.user.PushPreferencesActivity" />
+        <activity android:name=".ui.user.preference.PreferencesActivity" />
+        <activity android:name=".ui.user.preference.PushPreferencesActivity" />
+        <activity android:name=".ui.user.profile.BadgeActivity"/>
+        <activity android:name=".ui.user.profile.MannerActivity"/>
+        <activity android:name=".ui.user.profile.ProfileSellHistoryActivity"/>
+        <activity android:name=".ui.user.profile.ReviewActivity"/>
     </application>
 
 </manifest>

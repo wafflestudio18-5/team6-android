@@ -9,6 +9,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.carrotmarket.R
 import com.example.carrotmarket.databinding.FragmentUserBinding
+import com.example.carrotmarket.ui.user.preference.PreferencesActivity
+import com.example.carrotmarket.ui.user.profile.ProfileActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class UserFragment: Fragment(){
@@ -25,7 +27,7 @@ class UserFragment: Fragment(){
         binding.userProfile.profileLayout.setOnClickListener{ openActivity(ProfileActivity::class.java) }
 
         binding.userHistory.sellHistory.setOnClickListener{ openActivity(SellHistoryActivity::class.java) }
-        binding.userHistory.buyHistory.setOnClickListener{ openActivity(ProfileActivity::class.java) }
+        binding.userHistory.buyHistory.setOnClickListener{ openActivity(BuyHistoryActivity::class.java) }
         binding.userHistory.watchlist.setOnClickListener{ openActivity(WatchlistActivity::class.java) }
 
         binding.townSetting.layout.setOnClickListener{ openActivity(TownSettingActivity::class.java) }
@@ -34,7 +36,7 @@ class UserFragment: Fragment(){
         binding.following.layout.setOnClickListener{ openActivity(FollowingActivity::class.java) }
 
         binding.myFeed.layout.setOnClickListener{ openActivity(MyFeedActivity::class.java) }
-        binding.myFeedComment.layout.setOnClickListener{ openActivity(MyFeedCommentActivity::class.java) }
+        binding.myFeedComment.layout.setOnClickListener{ openActivity(MyFeedActivity::class.java) }
         binding.townSubject.layout.setOnClickListener{ openActivity(TownSubjectActivity::class.java) }
 
         binding.CEOMenu.layout.setOnClickListener{ openActivity(CEOMenuActivity::class.java) }
@@ -44,6 +46,9 @@ class UserFragment: Fragment(){
         binding.announcements.layout.setOnClickListener{ openActivity(AnnouncementsActivity::class.java) }
         binding.FAQ.layout.setOnClickListener{ openActivity(FAQActivity::class.java) }
         binding.preferences.layout.setOnClickListener{ openActivity(PreferencesActivity::class.java) }
+
+        binding.userName = viewModel.user.value?.userName
+        binding.town = viewModel.user.value?.town
     }
 
     private fun openActivity(activity: Class<*>){

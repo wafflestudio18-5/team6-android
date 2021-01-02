@@ -1,4 +1,4 @@
-package com.example.carrotmarket.ui.user
+package com.example.carrotmarket.ui.user.preference
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +9,9 @@ class PushPreferencesActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        supportFragmentManager.beginTransaction().replace(android.R.id.content, PushPreferencesFragment()).commit()
+        supportFragmentManager.beginTransaction().replace(android.R.id.content,
+            PushPreferencesFragment()
+        ).commit()
     }
 
 }
