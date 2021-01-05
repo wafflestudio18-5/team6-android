@@ -15,6 +15,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", '"http://www.team6carrotmarket.shop/"'
     }
 
     buildTypes {
@@ -45,7 +46,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
-    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.androidx.support:design:26.1.0'
 
     def okhttp3Version = '4.7.2'
     // OkHTTP3

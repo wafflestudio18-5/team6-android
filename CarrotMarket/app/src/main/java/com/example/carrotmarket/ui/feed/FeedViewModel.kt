@@ -15,8 +15,9 @@ class FeedViewModel(private val repository: Repository) : ViewModel() {
             .subscribeOn(Schedulers.io())
             .observeOn(Schedulers.io())
             .subscribe(
-                {it->feeds.postValue(it)
-                },{ Log.d("feedvm","error")}
+                { it ->
+                    feeds.postValue(it)
+                }, { Log.d("feedvm", "error") }
             )
     }
 }

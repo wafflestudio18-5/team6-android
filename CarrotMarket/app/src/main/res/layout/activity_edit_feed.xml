@@ -4,39 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.feed.CreateFeedActivity">
+    tools:context=".ui.feed.EditFeedActivity">
 
     <EditText
-        android:id="@+id/texttitle"
-        android:layout_width="0dp"
+        android:id="@+id/edtexttitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="title"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textcontents"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/edcontenttext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textcontents"
-        android:layout_width="0dp"
-        android:layout_height="686dp"
+        android:id="@+id/edcontenttext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/texttitle" />
+        app:layout_constraintTop_toBottomOf="@+id/edtexttitle"
+        tools:layout_editor_absoluteY="137dp" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registor"
+        android:id="@+id/button2"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:text="Edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textcontents" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

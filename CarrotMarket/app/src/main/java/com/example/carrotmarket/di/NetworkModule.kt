@@ -1,35 +1,38 @@
 package com.example.carrotmarket.di
 
+import com.example.carrotmarket.api.Service
+import com.example.carrotmarket.BuildConfig
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 val networkModule = module {
-    //single { provideOkHttpClient() }
-    //single { provideRetrofit(get()) }
-    //single { provideApiService(get()) }
+    single { provideOkHttpClient() }
+    single { provideRetrofit(get()) }
+    single { provideApiService(get()) }
 }
-/*
+
 private fun provideOkHttpClient() = if (BuildConfig.DEBUG) {
     val loggingInterceptor = HttpLoggingInterceptor()
     loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
 
-    val apiKeyInterceptor = object: Interceptor {
-        override fun intercept(chain: Interceptor.Chain): Response {
-            val request = chain.request()
-            val url = request.url.newBuilder().addQueryParameter("api_key", BuildConfig.TMDB_API_KEY).build()
-            return chain.proceed(request.newBuilder().url(url).build())
-        }
-    }
+//    val apiKeyInterceptor = object: Interceptor {
+//        override fun intercept(chain: Interceptor.Chain): Response {
+//            val request = chain.request()
+//            val url = request.url.newBuilder().addQueryParameter("api_key", BuildConfig.TMDB_API_KEY).build()
+//            return chain.proceed(request.newBuilder().url(url).build())
+//        }
+//    }
 
     OkHttpClient.Builder()
         .addInterceptor(loggingInterceptor)
-        .addInterceptor(apiKeyInterceptor)
+//        .addInterceptor(apiKeyInterceptor)
         .build()
 } else OkHttpClient
     .Builder()
@@ -41,9 +44,9 @@ private fun provideRetrofit(
     Retrofit.Builder()
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .addConverterFactory(GsonConverterFactory.create())
-        .baseUrl(BASE_URL)
+        .baseUrl("http://team6carrotmarket.shop")
         .client(okHttpClient)
         .build()
 
-private fun provideApiService(retrofit: Retrofit): MovieService =
-    retrofit.create(MovieService::class.java)*/
+private fun provideApiService(retrofit: Retrofit): Service =
+    retrofit.create(Service::class.java)
