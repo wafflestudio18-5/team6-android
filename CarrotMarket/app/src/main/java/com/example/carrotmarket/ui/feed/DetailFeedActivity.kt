@@ -3,6 +3,7 @@ package com.example.carrotmarket.ui.feed
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.databinding.DataBindingUtil
 import com.example.carrotmarket.R
 import com.example.carrotmarket.databinding.ActivityDetailFeedBinding
@@ -29,25 +30,25 @@ class DetailFeedActivity : AppCompatActivity() {
         binding.viewModel = viewModel
 
         val feed_id = intent.getIntExtra("artid", 0)
-        viewModel.detFeed(feed_id)
+        viewModel.detailFeed(feed_id)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 contentdf.text = it.content
                 titletext.text = it.title
                 likenum.text = it.like_count.toString()
-            }, {})
+            }, { Log.e("detailfeedactivity", it.message.toString()) })
         likebutton.setOnClickListener {
             viewModel.like(feed_id)
         }
         delbutton.setOnClickListener {
-            viewModel.delFeed(feed_id)
+            viewModel.deleteFeed(feed_id)
         }
         regcom.setOnClickListener {
-            viewModel.wrcomment(feed_id, wrcomtext.text.toString())
+            viewModel.wrComment(feed_id, wrcomtext.text.toString())
         }
         commentviewer.setOnClickListener {
-            viewModel.getcomments(feed_id)
+            viewModel.getComments(feed_id)
         }
         editbutton.setOnClickListener {
             val intent = Intent(this, EditFeedActivity::class.java)

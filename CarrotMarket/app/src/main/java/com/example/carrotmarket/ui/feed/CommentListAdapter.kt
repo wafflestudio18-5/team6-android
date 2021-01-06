@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.carrotmarket.api.Comment
 import com.example.carrotmarket.api.Feed
-import com.example.carrotmarket.api.Rcomment
+import com.example.carrotmarket.api.ResponseComment
 import com.example.carrotmarket.databinding.ItemCommentBinding
 
 class CommentListAdapter : RecyclerView.Adapter<CommentViewHolder>() {
-    private val comments = mutableListOf<Rcomment>()
+    private val comments = mutableListOf<ResponseComment>()
 
     override fun getItemCount(): Int = comments.size
 
@@ -23,7 +23,7 @@ class CommentListAdapter : RecyclerView.Adapter<CommentViewHolder>() {
         return CommentViewHolder(binding)
     }
 
-    fun setItems(comment: List<Rcomment>) {
+    fun setItems(comment: List<ResponseComment>) {
         comments.clear()
         comments.addAll(comment)
         notifyDataSetChanged()
@@ -33,7 +33,7 @@ class CommentListAdapter : RecyclerView.Adapter<CommentViewHolder>() {
 
 class CommentViewHolder(private val binding: ItemCommentBinding) :
     RecyclerView.ViewHolder(binding.root) {
-    fun bindItem(comment: Rcomment) {
+    fun bindItem(comment: ResponseComment) {
         binding.comment = comment
     }
 }

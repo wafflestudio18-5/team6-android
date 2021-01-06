@@ -16,18 +16,22 @@ class EditFeedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_feed)
-        var content = intent.getStringExtra("content")
-        var title = intent.getStringExtra("title")
+        val content = intent.getStringExtra("content")
+        val title = intent.getStringExtra("title")
         val feed_id = intent.getIntExtra("artid", 0)
         edcontenttext.setText(content)
         edtexttitle.setText(title)
         editbutton.setOnClickListener {
-            var edcont = edcontenttext.text.toString()
-            var edtit = edtexttitle.text.toString()
+            val edcont = edcontenttext.text.toString()
+            val edtit = edtexttitle.text.toString()
             viewModel.editFeed(feed_id, edtit, edcont)
                 .observeOn(Schedulers.io())
                 .subscribeOn(Schedulers.io())
-                .subscribe({}, { Toast.makeText(this, it.message, Toast.LENGTH_LONG).show() })
+                .subscribe({
+                    Toast.makeText(this, "Edit success!", Toast.LENGTH_LONG).show()
+                }, {
+                    Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                })
             val intent = Intent(this, DetailFeedActivity::class.java)
             intent.putExtra("artid", feed_id)
             startActivity(intent)

@@ -9,23 +9,23 @@ data class Feed(
     val like_count: Int
 )
 
-data class Pfeed(
+data class RequestFeedBody(
     val title: String,
     val content: String
 )
 
-data class Rfeed(
-    val user_id: Int,
-    val article_id: Int,
-    val title: String,
-    val content: String
-)
+//data class Rfeed(
+//    val user_id: Int,
+//    val article_id: Int,
+//    val title: String,
+//    val content: String
+//)
 
 data class Comment(
     val contents_of_comment: String
 )
 
-data class Rcomment(
+data class ResponseComment(
     val article_id: Int,
     val comment_id: Int,
     val user_id: Int,

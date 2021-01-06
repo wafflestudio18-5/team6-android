@@ -17,7 +17,7 @@ class FeedViewModel(private val repository: Repository) : ViewModel() {
             .subscribe(
                 { it ->
                     feeds.postValue(it)
-                }, { Log.d("feedvm", "error") }
+                }, { Log.e("feedvm", it.message.toString()) }
             )
     }
 }

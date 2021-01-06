@@ -7,7 +7,7 @@
 
         <variable
             name="comment"
-            type="com.example.carrotmarket.api.Rcomment" />
+            type="com.example.carrotmarket.api.ResponseComment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
