@@ -27,8 +27,8 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 
-class PlaceFragment : Fragment(), OnMapReadyCallback {
 
+class PlaceFragment: Fragment(), OnMapReadyCallback{
     private lateinit var binding: FragmentPlaceBinding
     private var mMap: GoogleMap? = null
 
@@ -39,8 +39,10 @@ class PlaceFragment : Fragment(), OnMapReadyCallback {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_place, container, false)
 
+
         val mapFragment: SupportMapFragment =
             childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+
         mapFragment.getMapAsync(this)
 
         return binding.root
@@ -56,6 +58,7 @@ class PlaceFragment : Fragment(), OnMapReadyCallback {
         markerOptions.snippet("한국의 수도")
         mMap?.addMarker(markerOptions)
         mMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 15F))*/
+
 
         if (ContextCompat.checkSelfPermission(
                 requireContext(),
