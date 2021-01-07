@@ -17,7 +17,7 @@ class CarrotMarketApplication: Application(){
             modules(listOf(networkModule, viewModelModule, repositoryModule))
         }
         //카카오 SDK 초기화
-        KakaoSdk.init(this, "a491f4206056cafb222c1b9c67a3b9d0")
+        KakaoSdk.init(this, BuildConfig.KAKAO_API_KEY)
     }
 
 
