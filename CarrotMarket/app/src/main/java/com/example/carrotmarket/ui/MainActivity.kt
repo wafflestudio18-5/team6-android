@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.carrotmarket.R
 import com.example.carrotmarket.databinding.ActivityMainBinding
+import com.example.carrotmarket.ui.feed.FeedFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 

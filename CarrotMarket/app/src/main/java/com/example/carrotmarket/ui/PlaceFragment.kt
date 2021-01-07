@@ -27,14 +27,22 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 
+
 class PlaceFragment: Fragment(), OnMapReadyCallback{
     private lateinit var binding: FragmentPlaceBinding
     private var mMap: GoogleMap? = null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?{
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_place, container, false)
 
-        val mapFragment: SupportMapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+
+        val mapFragment: SupportMapFragment =
+            childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+
         mapFragment.getMapAsync(this)
 
         return binding.root
@@ -51,17 +59,24 @@ class PlaceFragment: Fragment(), OnMapReadyCallback{
         mMap?.addMarker(markerOptions)
         mMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 15F))*/
 
-        if(ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+
+        if (ContextCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
             //mMap?.isMyLocationEnabled = true
-            val locationManager: LocationManager = context?.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+            val locationManager: LocationManager =
+                context?.getSystemService(Context.LOCATION_SERVICE) as LocationManager
             val locationProvider: String = LocationManager.NETWORK_PROVIDER
             val lastKnownLocation = locationManager.getLastKnownLocation(locationProvider)
-            Log.d("tag", lastKnownLocation?.latitude.toString() + " " + lastKnownLocation?.longitude.toString())
-        }
-        else{
+            Log.d(
+                "tag",
+                lastKnownLocation?.latitude.toString() + " " + lastKnownLocation?.longitude.toString()
+            )
+        } else {
             requestPermissions(arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), 100)
         }
-
 
 
     }
