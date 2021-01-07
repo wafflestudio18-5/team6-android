@@ -15,6 +15,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [googleMapsApiKey: localProperties['googleMapsApiKey']]
         buildConfigField "String", "BASE_URL", '"http://www.team6carrotmarket.shop/"'
     }
 
