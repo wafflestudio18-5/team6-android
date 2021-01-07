@@ -3,6 +3,7 @@
     package="com.example.carrotmarket">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:name=".CarrotMarketApplication"
@@ -12,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.feed.EditFeedActivity"></activity>
+        <activity android:name=".ui.feed.DetailFeedActivity" />
+        <activity android:name=".ui.feed.CreateFeedActivity" />
+        <activity android:name=".login.RegistorActivity" />
+        <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,6 +33,11 @@
                     android:scheme="kakaoa491f4206056cafb222c1b9c67a3b9d0"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.MainActivity" />
+      
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${googleMapsApiKey}"/>
     </application>
 
 </manifest>

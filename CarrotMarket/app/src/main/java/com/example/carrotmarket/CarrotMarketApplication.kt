@@ -9,7 +9,7 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
 
-class CarrotMarketApplication: Application(){
+class CarrotMarketApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         startKoin {
@@ -19,6 +19,4 @@ class CarrotMarketApplication: Application(){
         //카카오 SDK 초기화
         KakaoSdk.init(this, BuildConfig.KAKAO_API_KEY)
     }
-
-
 }

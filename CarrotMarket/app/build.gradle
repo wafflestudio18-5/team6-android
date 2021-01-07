@@ -18,7 +18,9 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+        buildConfigField "String", "BASE_URL", '"http://www.team6carrotmarket.shop/"'
         buildConfigField "String", "KAKAO_API_KEY", localProperties['kakaoApiKey']
+        manifestPlaceholders = [googleMapsApiKey: localProperties['googleMapsApiKey']]
     }
 
     buildTypes {
@@ -54,6 +56,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
+    implementation 'com.androidx.support:design:26.1.0'
 
     def okhttp3Version = '4.7.2'
     // OkHTTP3
@@ -92,4 +95,7 @@ dependencies {
     implementation "com.kakao.sdk:v2-link:2.2.0" // 메시지(카카오링크)
 
     implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
 }
