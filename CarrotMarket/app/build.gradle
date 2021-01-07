@@ -18,8 +18,9 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        manifestPlaceholders = [googleMapsApiKey: localProperties['googleMapsApiKey']]
         buildConfigField "String", "BASE_URL", '"http://www.team6carrotmarket.shop/"'
+        buildConfigField "String", "KAKAO_API_KEY", localProperties['kakaoApiKey']
+        manifestPlaceholders = [googleMapsApiKey: localProperties['googleMapsApiKey']]
     }
 
     buildTypes {
@@ -37,7 +38,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
 
     buildFeatures {
         dataBinding true
@@ -89,6 +89,12 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     kapt "com.android.databinding:compiler:3.1.4"
+
+    implementation "com.kakao.sdk:v2-user:2.2.0" // 카카오 로그인
+    implementation "com.kakao.sdk:v2-talk:2.2.0" // 친구, 메시지(카카오톡)
+    implementation "com.kakao.sdk:v2-link:2.2.0" // 메시지(카카오링크)
+
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 
     implementation 'com.google.android.gms:play-services-location:17.1.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CarrotMarket</string>
+    <string name="kakao_app_key">a491f4206056cafb222c1b9c67a3b9d0</string>
 </resources>
