@@ -10,7 +10,6 @@ import com.example.carrotmarket.R
 import com.example.carrotmarket.databinding.FragmentChatBinding
 
 class ChatFragment: Fragment(){
-    private val viewModel: ViewModel by viewModel()
     private lateinit var binding: FragmentChatBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?{
