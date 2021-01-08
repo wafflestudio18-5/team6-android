@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.feed.EditFeedActivity"></activity>
+        <activity android:name=".ui.feed.EditFeedActivity"/>
         <activity android:name=".ui.feed.DetailFeedActivity" />
         <activity android:name=".ui.feed.CreateFeedActivity" />
         <activity android:name=".ui.SignUpActivity"/>
@@ -57,7 +57,6 @@
                     android:scheme="kakaoa491f4206056cafb222c1b9c67a3b9d0"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${googleMapsApiKey}"/>

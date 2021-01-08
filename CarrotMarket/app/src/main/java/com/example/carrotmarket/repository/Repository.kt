@@ -1,9 +1,6 @@
 package com.example.carrotmarket.repository
 
-import com.example.carrotmarket.dataclass.RequestLogin
-import com.example.carrotmarket.dataclass.RequestUser
 import com.example.carrotmarket.api.*
-import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
 
 class Repository(private val service: Service) {

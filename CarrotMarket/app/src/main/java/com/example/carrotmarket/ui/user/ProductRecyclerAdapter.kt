@@ -3,46 +3,11 @@ package com.example.carrotmarket.ui.user
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.carrotmarket.dataclass.User
 import com.example.carrotmarket.databinding.ItemProductBinding
-import com.example.carrotmarket.dataclass.Product
+import com.example.carrotmarket.api.Product
 
 class ProductRecyclerAdapter: RecyclerView.Adapter<ProductViewHolder>(){
-    //var list = mutableListOf<Product>()
-    var list = listOf<Product>(
-        Product(
-            1,
-            "title1",
-            User(
-                2,
-                "userName",
-                "town",
-                "email",
-                "01098869322",
-                null,
-                ""
-            ),
-            12000,
-            "description",
-            true
-        ),
-        Product(
-            2,
-            "title2",
-            User(
-                2,
-                "userName2",
-                "town",
-                "email",
-                "01098869322",
-                null,
-                ""
-            ),
-            12300,
-            "description1",
-            true
-        )
-    )
+    var list = mutableListOf<Product>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder{
         val binding = ItemProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)

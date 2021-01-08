@@ -9,11 +9,6 @@ import com.example.carrotmarket.databinding.ActivityMainBinding
 import com.example.carrotmarket.ui.user.UserFragment
 import com.example.carrotmarket.ui.feed.FeedFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.example.carrotmarket.ui.HomeFragment
-import com.example.carrotmarket.ui.FeedFragment
-import com.example.carrotmarket.ui.PlaceFragment
-import com.example.carrotmarket.ui.ChatFragment
-import com.example.carrotmarket.ui.UserFragment
 import timber.log.Timber
 
 class MainActivity: AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener{

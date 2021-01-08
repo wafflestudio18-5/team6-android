@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.carrotmarket.CarrotMarketApplication.Companion.pref
-import com.example.carrotmarket.dataclass.User
+import com.example.carrotmarket.api.User
 import com.example.carrotmarket.repository.Repository
 import io.reactivex.rxjava3.schedulers.Schedulers
 

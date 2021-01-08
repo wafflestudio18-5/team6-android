@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.carrotmarket.api.Feed
+import com.example.carrotmarket.api.*
 import com.example.carrotmarket.api.ResponseComment
 import com.example.carrotmarket.repository.Repository
 import io.reactivex.rxjava3.core.Observable

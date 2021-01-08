@@ -1,14 +1,7 @@
 package com.example.carrotmarket.api
 
-import java.util.*
-import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.*
-import java.io.ObjectOutputStream
-import java.net.ContentHandler
-import com.example.carrotmarket.dataclass.RequestLogin
-import com.example.carrotmarket.dataclass.RequestUser
-import com.example.carrotmarket.dataclass.User
 
 interface Service {
     @POST("user/")
