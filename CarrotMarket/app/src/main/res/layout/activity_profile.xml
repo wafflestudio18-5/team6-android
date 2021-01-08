@@ -18,6 +18,9 @@
         <variable
             name="reviewText"
             type="String" />
+        <variable
+            name="viewModel"
+            type="com.example.carrotmarket.ui.user.profile.ProfileViewModel" />
     </data>
 
     <LinearLayout
@@ -50,7 +53,7 @@
                 android:layout_marginTop="27dp"
                 android:layout_marginEnd="261dp"
                 android:layout_marginBottom="26dp"
-                android:text="User Name"
+                android:text="@{viewModel.user.username}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/profileImage"

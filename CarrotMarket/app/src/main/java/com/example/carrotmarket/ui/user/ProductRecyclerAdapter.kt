@@ -20,7 +20,7 @@ class ProductRecyclerAdapter: RecyclerView.Adapter<ProductViewHolder>(){
                 "email",
                 "01098869322",
                 null,
-                null
+                ""
             ),
             12000,
             "description",
@@ -36,7 +36,7 @@ class ProductRecyclerAdapter: RecyclerView.Adapter<ProductViewHolder>(){
                 "email",
                 "01098869322",
                 null,
-                null
+                ""
             ),
             12300,
             "description1",

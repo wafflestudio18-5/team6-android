@@ -6,13 +6,8 @@
             name="profileImage"
             type="android.graphics.drawable.Drawable" />
         <variable
-            name="userName"
-            type="String" />
-        <variable
-            name="town"
-            type="String" />
-
-
+            name="viewModel"
+            type="com.example.carrotmarket.ui.user.UserViewModel" />
     </data>
 
     <ScrollView
@@ -27,8 +22,8 @@
             <include layout="@layout/user_layout_profile"
                 android:id="@+id/userProfile"
                 app:image="@{profileImage}"
-                app:userName="@{userName}"
-                app:town="@{town}"/>
+                app:userName="@{viewModel.user.username}"
+                app:town="@{viewModel.user.town}"/>
 
             <include layout="@layout/user_layout_history"
                 android:id="@+id/userHistory" />

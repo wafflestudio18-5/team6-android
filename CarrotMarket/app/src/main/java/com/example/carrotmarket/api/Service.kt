@@ -1,18 +1,19 @@
 package com.example.carrotmarket.api
 
+import com.example.carrotmarket.dataclass.RequestLogin
+import com.example.carrotmarket.dataclass.RequestUser
 import com.example.carrotmarket.dataclass.User
 import io.reactivex.rxjava3.core.Observable
-import retrofit2.http.GET
-import retrofit2.http.Path
+import io.reactivex.rxjava3.core.Single
+import retrofit2.http.*
 
 interface Service {
-    @GET("api/user/{id}/")
-    fun getUser(@Path("id") id: Int): Observable<User>
+    @POST("user/")
+    fun signUp(@Body requestUser: RequestUser): Single<User>
 
-    //@GET("api/feed/")
-    //fun getfeed(): Observable<List<Feed>>
+    @PUT("user/login/")
+    fun login(@Body requestLogin: RequestLogin): Single<User>
+
+    @GET("user/me/")
+    fun getUser(@Header("Authorization") token: String): Single<User>
 }
-
-data class Feed(
-    val body: String
-)

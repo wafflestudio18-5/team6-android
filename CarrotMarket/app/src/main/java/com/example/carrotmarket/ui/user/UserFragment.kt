@@ -24,31 +24,35 @@ class UserFragment: Fragment(){
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.userProfile.profileLayout.setOnClickListener{ openActivity(ProfileActivity::class.java) }
+        binding.also{
+            it.userProfile.profileLayout.setOnClickListener{ openActivity(ProfileActivity::class.java) }
 
-        binding.userHistory.sellHistory.setOnClickListener{ openActivity(SellHistoryActivity::class.java) }
-        binding.userHistory.buyHistory.setOnClickListener{ openActivity(BuyHistoryActivity::class.java) }
-        binding.userHistory.watchlist.setOnClickListener{ openActivity(WatchlistActivity::class.java) }
+            it.userHistory.sellHistory.setOnClickListener{ openActivity(SellHistoryActivity::class.java) }
+            it.userHistory.buyHistory.setOnClickListener{ openActivity(BuyHistoryActivity::class.java) }
+            it.userHistory.watchlist.setOnClickListener{ openActivity(WatchlistActivity::class.java) }
 
-        binding.townSetting.layout.setOnClickListener{ openActivity(TownSettingActivity::class.java) }
-        binding.townVerify.layout.setOnClickListener{ openActivity(TownVerifyActivity::class.java) }
-        binding.keywordNotice.layout.setOnClickListener{ openActivity(KeywordNoticeActivity::class.java) }
-        binding.following.layout.setOnClickListener{ openActivity(FollowingActivity::class.java) }
+            it.townSetting.layout.setOnClickListener{ openActivity(TownSettingActivity::class.java) }
+            it.townVerify.layout.setOnClickListener{ openActivity(TownVerifyActivity::class.java) }
+            it.keywordNotice.layout.setOnClickListener{ openActivity(KeywordNoticeActivity::class.java) }
+            it.following.layout.setOnClickListener{ openActivity(FollowingActivity::class.java) }
 
-        binding.myFeed.layout.setOnClickListener{ openActivity(MyFeedActivity::class.java) }
-        binding.myFeedComment.layout.setOnClickListener{ openActivity(MyFeedActivity::class.java) }
-        binding.townSubject.layout.setOnClickListener{ openActivity(TownSubjectActivity::class.java) }
+            it.myFeed.layout.setOnClickListener{ openActivity(MyFeedActivity::class.java) }
+            it.myFeedComment.layout.setOnClickListener{ openActivity(MyFeedActivity::class.java) }
+            it.townSubject.layout.setOnClickListener{ openActivity(TownSubjectActivity::class.java) }
 
-        binding.CEOMenu.layout.setOnClickListener{ openActivity(CEOMenuActivity::class.java) }
+            it.CEOMenu.layout.setOnClickListener{ openActivity(CEOMenuActivity::class.java) }
 
-        binding.friendInvite.layout.setOnClickListener{ openActivity(FriendInviteActivity::class.java) }
-        binding.share.layout.setOnClickListener{ openActivity(ShareActivity::class.java) }
-        binding.announcements.layout.setOnClickListener{ openActivity(AnnouncementsActivity::class.java) }
-        binding.FAQ.layout.setOnClickListener{ openActivity(FAQActivity::class.java) }
-        binding.preferences.layout.setOnClickListener{ openActivity(PreferencesActivity::class.java) }
-
-        binding.userName = viewModel.user.value?.userName
-        binding.town = viewModel.user.value?.town
+            it.friendInvite.layout.setOnClickListener{ openActivity(FriendInviteActivity::class.java) }
+            it.share.layout.setOnClickListener{ openActivity(ShareActivity::class.java) }
+            it.announcements.layout.setOnClickListener{ openActivity(AnnouncementsActivity::class.java) }
+            it.FAQ.layout.setOnClickListener{ openActivity(FAQActivity::class.java) }
+            it.preferences.layout.setOnClickListener{ openActivity(PreferencesActivity::class.java) }
+        }
+        viewModel.getUserInfo()
+        binding.apply{
+            lifecycleOwner = this@UserFragment
+            viewModel = this@UserFragment.viewModel
+        }
     }
 
     private fun openActivity(activity: Class<*>){
