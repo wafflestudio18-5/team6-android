@@ -1,14 +1,23 @@
 package com.example.carrotmarket.repository
 
+import com.example.carrotmarket.dataclass.RequestLogin
+import com.example.carrotmarket.dataclass.RequestUser
 import com.example.carrotmarket.api.*
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
-
 
 class Repository(private val service: Service) {
     fun getFeed(): Single<List<Feed>> {
         return service.getFeed()
     }
+
+
+    fun getUserInfo(token: String) = service.getUser(token)
+
+    fun signUp(username: String, password: String, email: String, first_name: String, last_name: String)
+            = service.signUp(RequestUser(username, password, email, first_name, last_name))
+
+    fun login(username: String, password: String) = service.login(RequestLogin(username, password))
 
     fun postFeed(title: String, contents: String): Single<Feed> {
         return service.postFeed(RequestFeedBody(title, contents))

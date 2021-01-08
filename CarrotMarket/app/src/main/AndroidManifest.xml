@@ -7,23 +7,47 @@
 
     <application
         android:name=".CarrotMarketApplication"
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.feed.EditFeedActivity"></activity>
-        <activity android:name=".ui.feed.DetailFeedActivity" />
-        <activity android:name=".ui.feed.CreateFeedActivity" />
-        <activity android:name=".login.RegistorActivity" />
-        <activity android:name=".login.LoginActivity">
+
+        <activity android:name=".ui.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.feed.EditFeedActivity"></activity>
+        <activity android:name=".ui.feed.DetailFeedActivity" />
+        <activity android:name=".ui.feed.CreateFeedActivity" />
+        <activity android:name=".ui.SignUpActivity"/>
+        <activity android:name=".ui.MainActivity"/>
+        <activity android:name=".ui.user.profile.ProfileActivity" />
+        <activity android:name=".ui.user.SellHistoryActivity" />
+        <activity android:name=".ui.user.BuyHistoryActivity" />
+        <activity android:name=".ui.user.WatchlistActivity" />
+        <activity android:name=".ui.user.TownSettingActivity" />
+        <activity android:name=".ui.user.TownVerifyActivity" />
+        <activity android:name=".ui.user.KeywordNoticeActivity" />
+        <activity android:name=".ui.user.FollowingActivity" />
+        <activity android:name=".ui.user.MyFeedActivity" />
+        <activity android:name=".ui.user.TownSubjectActivity" />
+        <activity android:name=".ui.user.CEOMenuActivity" />
+        <activity android:name=".ui.user.FriendInviteActivity" />
+        <activity android:name=".ui.user.ShareActivity" />
+        <activity android:name=".ui.user.AnnouncementsActivity" />
+        <activity android:name=".ui.user.FAQActivity" />
+        <activity android:name=".ui.user.preference.PreferencesActivity" />
+        <activity android:name=".ui.user.preference.PushPreferencesActivity" />
+        <activity android:name=".ui.user.profile.BadgeActivity"/>
+        <activity android:name=".ui.user.profile.MannerActivity"/>
+        <activity android:name=".ui.user.profile.ProfileSellHistoryActivity"/>
+        <activity android:name=".ui.user.profile.ReviewActivity"/>
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -34,10 +58,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.MainActivity" />
-      
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${googleMapsApiKey}"/>
     </application>
-
 </manifest>
