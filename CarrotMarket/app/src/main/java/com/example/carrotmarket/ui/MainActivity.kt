@@ -7,7 +7,14 @@ import androidx.databinding.DataBindingUtil
 import com.example.carrotmarket.R
 import com.example.carrotmarket.databinding.ActivityMainBinding
 import com.example.carrotmarket.ui.user.UserFragment
+import com.example.carrotmarket.ui.feed.FeedFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.carrotmarket.ui.HomeFragment
+import com.example.carrotmarket.ui.FeedFragment
+import com.example.carrotmarket.ui.PlaceFragment
+import com.example.carrotmarket.ui.ChatFragment
+import com.example.carrotmarket.ui.UserFragment
+import timber.log.Timber
 
 class MainActivity: AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener{
     private lateinit var binding: ActivityMainBinding
@@ -27,6 +34,8 @@ class MainActivity: AppCompatActivity(), BottomNavigationView.OnNavigationItemSe
             this
         )
         bottomNavigation.selectedItemId = R.id.menu_home
+
+        setupTimber()
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -43,6 +52,7 @@ class MainActivity: AppCompatActivity(), BottomNavigationView.OnNavigationItemSe
         return true
     }
 
-
-
+    private fun setupTimber(){
+        Timber.plant(Timber.DebugTree())
+    }
 }
