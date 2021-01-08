@@ -35,7 +35,7 @@ private fun provideRetrofit(
     Retrofit.Builder()
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .addConverterFactory(GsonConverterFactory.create())
-        .baseUrl("http://team6carrotmarket.shop/")
+        .baseUrl(BuildConfig.BASE_URL)
         .client(okHttpClient)
         .build()
 

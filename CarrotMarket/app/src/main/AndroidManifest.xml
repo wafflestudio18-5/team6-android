@@ -18,7 +18,6 @@
         <activity android:name=".ui.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -54,7 +53,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:host="oauth"
-                    android:scheme="kakaoa491f4206056cafb222c1b9c67a3b9d0"/>
+                    android:scheme="${kakaoApiKey}"/>
             </intent-filter>
         </activity>
         <meta-data

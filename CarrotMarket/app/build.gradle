@@ -20,7 +20,8 @@ android {
 
         buildConfigField "String", "BASE_URL", '"http://www.team6carrotmarket.shop/"'
         buildConfigField "String", "KAKAO_API_KEY", localProperties['kakaoApiKey']
-        manifestPlaceholders = [googleMapsApiKey: localProperties['googleMapsApiKey']]
+        manifestPlaceholders = [googleMapsApiKey: localProperties['googleMapsApiKey'],
+                                kakaoApiKey: "kakao" + localProperties['kakaoApiKey']]
     }
 
     buildTypes {
