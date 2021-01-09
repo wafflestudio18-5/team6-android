@@ -1,19 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  
     <data>
-
-
+        <variable
+            name="profileImage"
+            type="android.graphics.drawable.Drawable" />
+        <variable
+            name="viewModel"
+            type="com.example.carrotmarket.ui.user.UserViewModel" />
     </data>
 
-    <LinearLayout
-        android:orientation="vertical" android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView5"
+        <LinearLayout android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="user" />
-    </LinearLayout>
+            android:background="@color/colorGray">
+
+            <include layout="@layout/user_layout_profile"
+                android:id="@+id/userProfile"
+                app:image="@{profileImage}"
+                app:userName="@{viewModel.user.username}"
+                app:town="@{viewModel.user.town}"/>
+
+            <include layout="@layout/user_layout_history"
+                android:id="@+id/userHistory" />
+
+            <include layout="@layout/user_layout"
+                android:id="@+id/townSetting"
+                app:text="@{@string/town_setting}"/>
+            <include layout="@layout/user_layout"
+                android:id="@+id/townVerify"
+                app:text="@{@string/town_verify}"/>
+            <include layout="@layout/user_layout"
+                android:id="@+id/keywordNotice"
+                app:text="@{@string/keyword_notice}"/>
+            <include layout="@layout/user_layout"
+                android:id="@+id/following"
+                app:text="@{@string/following}"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <include layout="@layout/user_layout"
+                android:id="@+id/myFeed"
+                app:text="@{@string/my_feed}"/>
+            <include layout="@layout/user_layout"
+                android:id="@+id/myFeedComment"
+                app:text="@{@string/my_feed_comment}"/>
+            <include layout="@layout/user_layout"
+                android:id="@+id/townSubject"
+                app:text="@{@string/town_subjects}"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <include layout="@layout/user_layout"
+                android:id="@+id/CEOMenu"
+                app:text="@{@string/CEO_menu}"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <include layout="@layout/user_layout"
+                android:id="@+id/friendInvite"
+                app:text="@{@string/friend_invite}"/>
+            <include layout="@layout/user_layout"
+                android:id="@+id/share"
+                app:text="@{@string/share}"/>
+            <include layout="@layout/user_layout"
+                android:id="@+id/announcements"
+                app:text="@{@string/announcements}"/>
+            <include layout="@layout/user_layout"
+                android:id="@+id/FAQ"
+                app:text="@{@string/FAQ}"/>
+            <include layout="@layout/user_layout"
+                android:id="@+id/preferences"
+                app:text="@{@string/preferences}"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+        </LinearLayout>
+    </ScrollView>
 </layout>

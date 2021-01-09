@@ -20,19 +20,10 @@ val networkModule = module {
 
 private fun provideOkHttpClient() = if (BuildConfig.DEBUG) {
     val loggingInterceptor = HttpLoggingInterceptor()
-    loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
-
-//    val apiKeyInterceptor = object: Interceptor {
-//        override fun intercept(chain: Interceptor.Chain): Response {
-//            val request = chain.request()
-//            val url = request.url.newBuilder().addQueryParameter("api_key", BuildConfig.TMDB_API_KEY).build()
-//            return chain.proceed(request.newBuilder().url(url).build())
-//        }
-//    }
+    loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.HEADERS)
 
     OkHttpClient.Builder()
         .addInterceptor(loggingInterceptor)
-//        .addInterceptor(apiKeyInterceptor)
         .build()
 } else OkHttpClient
     .Builder()
@@ -44,7 +35,7 @@ private fun provideRetrofit(
     Retrofit.Builder()
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .addConverterFactory(GsonConverterFactory.create())
-        .baseUrl("http://team6carrotmarket.shop")
+        .baseUrl("http://team6carrotmarket.shop/")
         .client(okHttpClient)
         .build()
 

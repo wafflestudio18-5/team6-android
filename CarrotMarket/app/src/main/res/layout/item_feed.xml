@@ -12,68 +12,38 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/numlike"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@{item.like_count}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/likes"
-            app:layout_constraintTop_toBottomOf="@+id/contenttext"
-            tools:layout_editor_absoluteX="33dp" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/teduri">
 
         <ImageView
             android:id="@+id/likes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/numlike"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/contenttext"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_baseline_thumb_up_24" />
-
-        <ImageView
-            android:id="@+id/comments"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/numcom"
-            app:layout_constraintTop_toBottomOf="@+id/contenttext"
-            app:layout_constraintVertical_bias="0.625"
-            app:srcCompat="@drawable/ic_baseline_comment_24"
-            tools:layout_editor_absoluteX="357dp" />
-
-        <TextView
-            android:id="@+id/numcom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@{item.comment_count}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/comments"
-            app:layout_constraintTop_toBottomOf="@+id/contenttext" />
 
         <TextView
             android:id="@+id/contenttext"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@{item.content}"
-            app:layout_constraintTop_toBottomOf="@+id/username"
-            tools:layout_editor_absoluteX="0dp" />
+            android:layout_marginTop="8dp"
+            android:text="@{item.contents}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView2" />
 
         <TextView
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="aaaaa"
+            android:text="@{item.username}"
             app:layout_constraintBottom_toTopOf="@id/contenttext"
             app:layout_constraintStart_toEndOf="@+id/profilepic"
             app:layout_constraintTop_toTopOf="parent" />
@@ -83,11 +53,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/contenttext"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.435"
             app:srcCompat="@drawable/ic_baseline_person_outline_24" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@{item.title}"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/contenttext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.like_count.toString()}"
+            app:layout_constraintStart_toEndOf="@id/likes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contenttext"
+            tools:layout_editor_absoluteX="40dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

@@ -3,6 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.carrotmarket.ui.LoginViewModel" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,11 +16,11 @@
 
         <EditText
             android:id="@+id/textView"
-            android:layout_width="353dp"
+            android:layout_width="355dp"
             android:layout_height="46dp"
             android:ems="10"
             android:hint="Username"
-            android:inputType="textPersonName"
+            android:text="@={viewModel.username}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -24,19 +29,20 @@
 
         <EditText
             android:id="@+id/passwordText"
-            android:layout_width="349dp"
+            android:layout_width="355dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="password"
             android:inputType="textPassword"
+            android:text="@={viewModel.password}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
             android:id="@+id/loginButton"
-            android:layout_width="354dp"
+            android:layout_width="355dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
             android:text="Log in"
@@ -45,7 +51,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
-            android:id="@+id/registorButton"
+            android:id="@+id/signUpButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -53,6 +59,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/loginButton" />
-
+      
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

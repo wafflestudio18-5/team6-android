@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.example.carrotmarket.CarrotMarketApplication.Companion.pref
 import com.example.carrotmarket.R
 import com.example.carrotmarket.databinding.FragmentFeedBinding
 import com.example.carrotmarket.ui.MainActivity
@@ -16,6 +17,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 class FeedFragment : Fragment() {
     private val viewModel: FeedViewModel by viewModel()
     private lateinit var binding: FragmentFeedBinding
+    private val token: String = pref.user.token
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -9,7 +9,7 @@ import com.example.carrotmarket.ui.feed.CommentListAdapter
 import com.example.carrotmarket.ui.feed.FeedListAdapter
 
 @BindingAdapter("feeds")
-fun bindItem(view: RecyclerView, feed: List<Feed>) {
+fun bindItem(view: RecyclerView, feed: List<Feed>?) {
     val adapter = view.adapter as? FeedListAdapter
     if (feed != null) {
         adapter?.setItems(feed)

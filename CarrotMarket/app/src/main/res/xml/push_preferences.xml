@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        android:title="채팅 알림"
+        android:summary="채팅 메시지 알림"
+        android:defaultValue="true"
+        app:iconSpaceReserved="false"
+        android:key="key_chat_notify"/>
+
+    <SwitchPreference
+        android:title="키워드 알림"
+        android:summary="등록된 키워드와 관련된 판매글 알림"
+        android:defaultValue="true"
+        app:iconSpaceReserved="false"
+        android:key="key_keyword_notify"/>
+
+    <SwitchPreference
+        android:title="활동 알림"
+        android:summary="댓글, 공감, 관심글 알림"
+        android:defaultValue="true"
+        app:iconSpaceReserved="false"
+        android:key="key_activity_notify"/>
+
+    <SwitchPreference
+        android:title="기타 알림"
+        android:summary="나눔의 날, 가계부 알림"
+        android:defaultValue="true"
+        app:iconSpaceReserved="false"
+        android:key="key_etc_notify"/>
+
+</androidx.preference.PreferenceScreen>

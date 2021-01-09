@@ -24,7 +24,7 @@
         android:layout_height="686dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="contents"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -26,8 +26,11 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 class PlaceFragment: Fragment(), OnMapReadyCallback{
     private lateinit var binding: FragmentPlaceBinding
     private var mMap: GoogleMap? = null
