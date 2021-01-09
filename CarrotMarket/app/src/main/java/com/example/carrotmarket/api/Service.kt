@@ -1,5 +1,6 @@
 package com.example.carrotmarket.api
 
+
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.*
@@ -41,6 +42,7 @@ interface Service {
         @Path("feed_id") feed_id: Int,
         @Body body: RequestFeedBody
     ): Single<Feed>
+
 
     @POST("/feed/{feed_id}/comment_write/")
     fun writeComment(

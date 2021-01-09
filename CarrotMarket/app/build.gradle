@@ -18,13 +18,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-<<<<<<< Updated upstream
-        manifestPlaceholders = [googleMapsApiKey: localProperties['googleMapsApiKey']]
-=======
->>>>>>> Stashed changes
         buildConfigField "String", "BASE_URL", '"http://www.team6carrotmarket.shop/"'
         buildConfigField "String", "KAKAO_API_KEY", localProperties['kakaoApiKey']
-        manifestPlaceholders = [googleMapsApiKey: localProperties['googleMapsApiKey']]
+        manifestPlaceholders = [googleMapsApiKey: localProperties['googleMapsApiKey'],
+                                kakaoApiKey: "kakao" + localProperties['kakaoApiKey']]
     }
 
     buildTypes {
@@ -43,14 +40,13 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-<<<<<<< Updated upstream
 
     buildFeatures {
         dataBinding true
-=======
+    }
+    
     dataBinding{
         enabled true
->>>>>>> Stashed changes
     }
 }
 
@@ -100,8 +96,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     kapt "com.android.databinding:compiler:3.1.4"
 
-<<<<<<< Updated upstream
-=======
     implementation "androidx.preference:preference:1.1.1"
 
     implementation "androidx.viewpager2:viewpager2:1.0.0"
@@ -112,7 +106,6 @@ dependencies {
 
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
->>>>>>> Stashed changes
     implementation 'com.google.android.gms:play-services-location:17.1.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
 }

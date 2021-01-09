@@ -20,7 +20,7 @@ val networkModule = module {
 
 private fun provideOkHttpClient() = if (BuildConfig.DEBUG) {
     val loggingInterceptor = HttpLoggingInterceptor()
-    loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.HEADERS)
+    loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
 
     OkHttpClient.Builder()
         .addInterceptor(loggingInterceptor)
@@ -35,7 +35,7 @@ private fun provideRetrofit(
     Retrofit.Builder()
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .addConverterFactory(GsonConverterFactory.create())
-        .baseUrl("http://team6carrotmarket.shop/")
+        .baseUrl(BuildConfig.BASE_URL)
         .client(okHttpClient)
         .build()
 

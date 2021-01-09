@@ -19,6 +19,7 @@ class FeedFragment : Fragment() {
     private lateinit var binding: FragmentFeedBinding
     private val token: String = pref.user.token
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

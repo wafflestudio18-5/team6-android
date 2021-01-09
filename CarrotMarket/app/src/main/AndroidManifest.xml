@@ -18,14 +18,10 @@
         <activity android:name=".ui.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< Updated upstream
-        <activity android:name=".ui.MainActivity" />
 
-=======
         <activity android:name=".ui.feed.EditFeedActivity"/>
         <activity android:name=".ui.feed.DetailFeedActivity" />
         <activity android:name=".ui.feed.CreateFeedActivity" />
@@ -58,10 +54,11 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:host="oauth"
-                    android:scheme="kakaoa491f4206056cafb222c1b9c67a3b9d0"/>
+
+                    android:scheme="${kakaoApiKey}"/>
             </intent-filter>
         </activity>
->>>>>>> Stashed changes
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${googleMapsApiKey}"/>

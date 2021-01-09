@@ -24,7 +24,6 @@ class LoginViewModel(private val repository: Repository) : ViewModel() {
                     {pref.user = it
                         success.postValue(true)
                         Log.d("tag", "login success " + it.toString())
-                        Log.d("tag2", pref.user.toString())
                     },
                     { Log.d("error",it.toString())}
                 )
