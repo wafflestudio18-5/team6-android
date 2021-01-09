@@ -26,6 +26,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
+
 class PlaceFragment: Fragment(), OnMapReadyCallback{
     private lateinit var binding: FragmentPlaceBinding
     private var mMap: GoogleMap? = null

@@ -36,11 +36,13 @@
             android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="75dp"
             android:clickable="true"
             app:backgroundTint="@android:color/holo_orange_dark"
-            app:srcCompat="@android:drawable/ic_menu_edit"
-            tools:layout_editor_absoluteX="336dp"
-            tools:layout_editor_absoluteY="657dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
